@@ -27,8 +27,8 @@ def main():
     guessed = set()
 
     # pick a word at random
-    #word = random.choice(words)
-    word = words[0]  # temporarily just use the first word 
+    word = random.choice(words)
+    #word = words[4]  # temporarily just use the first word 
 
     # play the game until they win or run out of guesses
     while guesses > 0:
@@ -53,7 +53,7 @@ def main():
             # check word one letter at a time
             for index, word_letter in enumerate(word):
                 if letter == word_letter:
-                    revealed[index] = leter
+                    revealed[index] = letter
 
             # if revealed is only letters, the player has won!
             if "_" not in revealed:
